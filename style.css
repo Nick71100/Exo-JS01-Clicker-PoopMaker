@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: #645431;
+  padding: 30px 0;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Rubik Moonrocks", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+}
+
+h3 {
+  font-family: "Slackey", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: #645431;
+}
+
+.scenario p {
+  font-size: 18px;
+}
+
+.scenario img {
+  width: 200px;
+  height: auto;
+  float: right;
+}
+
+#poopCounter p {
+  font-family: "Slackey", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #645431;
+}
+
+#poopClicker {
+  margin-left: 80px;
+  background-color: #fff;
+  border: none;
+  font-size: 60px;
+  color: #645431;
+  cursor: pointer;
+}
+
+#poopClicker:active {
+  position: relative;
+  top: 1px;
+}
+
+.shop {
+  margin-top: 40px;
+}
+
+footer p {
+  color: #fff;
+}

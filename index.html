@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poop Maker v1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Moonrocks&family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/55a698f7a1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Poop Maker</h1>
+    </header>
+
+    <main>
+      <h3>A scientist has discovered how to turn poop into energy !</h3>
+      <div class="scenario">
+        <p>
+          We must therefore produce as much poop as possible to meet humanity's
+          ever-increasing energy needs, replace non-renewable energies that are
+          harmful to the environment, in order to
+          <strong>save the world !</strong>
+        </p>
+        <img
+          src="https://m.media-amazon.com/images/I/5116HPZpPML._AC_UF1000,1000_QL80_.jpg"
+          alt="The wonderfull world of poop"
+        />
+      </div>
+      <p><em>Click on the poop icon to make poop</em></p>
+      <div id="poopCounter">
+        <p>Poops : 0</p>
+      </div>
+      <button type="button" id="poopClicker">
+        <i class="fa-solid fa-poo"></i>
+      </button>
+
+      <div class="shop">
+        <p id="dollars">You have 0 $</p>
+        <button id="sellPoop">Sell 50 poops</button>
+        <button id="buyLax">Buy a laxatif (25$)</button>
+      </div>
+      <p><em>A laxatif gives you a 2x poop booster for 10 seconds</em></p>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright. Nick 2025</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
