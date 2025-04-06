@@ -35,8 +35,7 @@ function autoPoop() {
 }
 
 poopClicker.addEventListener("click", function () {
-  poops += poopAmt;
-  poops += poopBoost;
+  poops += poopAmt + poopBoost;
   poopCounterAmt();
 
   if (poops >= 100 && !autoPoopActive) {
@@ -53,7 +52,7 @@ sellPoop.addEventListener("click", function () {
     poopCounterAmt();
     dollarsCounter();
   } else {
-    alert("Not enought poops !.");
+    alert("Not enough poops !");
   }
 });
 
@@ -73,11 +72,11 @@ buyLax.addEventListener("click", function () {
       }, 10000);
     } else {
       alert(
-        "You have already taken a laxatif, it's dangerous to take a second one now."
+        "You have already taken a laxative, it's dangerous to take a second one now."
       );
     }
   } else {
-    alert("Not enought dollars !.");
+    alert("Not enough dollars !");
   }
 });
 
@@ -88,7 +87,7 @@ buyCow.addEventListener("click", function () {
     poopAmt += 3;
     poopBoosterCounter();
   } else {
-    alert("Not enought dollars !.");
+    alert("Not enought dollars !");
   }
 });
 
