@@ -31,25 +31,32 @@
           harmful to the environment, in order to
           <strong>save the world !</strong>
         </p>
-        <img
-          src="https://m.media-amazon.com/images/I/5116HPZpPML._AC_UF1000,1000_QL80_.jpg"
-          alt="The wonderfull world of poop"
-        />
       </div>
-      <p><em>Click on the poop icon to make poop</em></p>
-      <div id="poopCounter">
-        <p>Poops : 0</p>
-      </div>
-      <button type="button" id="poopClicker">
-        <i class="fa-solid fa-poo"></i>
-      </button>
+      <div class="game">
+        <div class="game-state">
+          <p><em>Click on the poop icon to make poop</em></p>
+          <div>
+            <p id="poop-boost">boost : x1</p>
+            <p id="poop-counter">Poops : 0</p>
+          </div>
+          <button type="button" id="poop-clicker">
+            <i class="fa-solid fa-poo"></i>
+          </button>
+        </div>
 
-      <div class="shop">
-        <p id="dollars">You have 0 $</p>
-        <button id="sellPoop">Sell 50 poops</button>
-        <button id="buyLax">Buy a laxatif (25$)</button>
+        <div class="shop">
+          <h3>Shop</h3>
+          <p id="dollars">You have 0 $</p>
+          <button id="sell-poop">Sell 50 poops</button>
+          <button id="buy-lax">Buy a laxatif (25$)</button>
+          <button id="buy-cow">Buy a cow (250$)</button>
+        </div>
       </div>
-      <p><em>A laxatif gives you a 2x poop booster for 10 seconds</em></p>
+
+      <div class="game-infos">
+        <p><em>A laxatif gives you a 2x poop booster for 10 seconds</em></p>
+        <p><em>A Cow give you a 4x poop booster</em></p>
+      </div>
     </main>
 
     <footer>

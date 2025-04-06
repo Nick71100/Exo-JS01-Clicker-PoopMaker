@@ -39,35 +39,51 @@ h3 {
   font-size: 18px;
 }
 
-.scenario img {
-  width: 200px;
-  height: auto;
-  float: right;
+.game {
+  display: flex;
+  justify-content: space-around;
 }
 
-#poopCounter p {
+#poop-counter {
   font-family: "Slackey", sans-serif;
   font-size: 25px;
   font-weight: bold;
   color: #645431;
 }
 
-#poopClicker {
+#poop-clicker {
   margin-left: 80px;
+  padding: 10px 10px 0px;
   background-color: #fff;
-  border: none;
   font-size: 60px;
   color: #645431;
   cursor: pointer;
+  border: 10px solid #645431;
+  border-radius: 30px;
 }
 
-#poopClicker:active {
+#poop-clicker:active {
   position: relative;
   top: 1px;
 }
 
 .shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   margin-top: 40px;
+  padding: 20px;
+  border: 3px solid #645431;
+  border-radius: 20px;
+}
+
+.shop h3 {
+  margin: 0;
+}
+
+.game-infos {
+  margin-top: 60px;
 }
 
 footer p {

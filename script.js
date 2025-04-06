@@ -1,16 +1,28 @@
 let poops = 0;
-const poopClicker = document.getElementById("poopClicker");
-const poopCounter = document.getElementById("poopCounter");
-const sellPoop = document.getElementById("sellPoop");
-const buyLax = document.getElementById("buyLax");
+const poopClicker = document.getElementById("poop-clicker");
+const poopCounter = document.getElementById("poop-counter");
+const boostAmt = document.getElementById("poop-boost");
+
 const dollarsCount = document.getElementById("dollars");
-let autoPoopActif = false;
+
+const sellPoop = document.getElementById("sell-poop");
+const buyLax = document.getElementById("buy-lax");
+const buyCow = document.getElementById("buy-cow");
+
+let autoPoopActive = false;
 let dollars = 0;
-let boost = 1;
-let boostActif = false;
+let poopAmt = 1;
+let poopBoost = 0;
+let boostLaxActive = false;
+let boosterCounter = 1;
 
 function dollarsCounter() {
   dollarsCount.innerHTML = "<p>You have " + dollars + " $</p>";
+}
+
+function poopBoosterCounter() {
+  boosterCounter = poopAmt + poopBoost;
+  boostAmt.innerHTML = "<p>Boost : x" + boosterCounter + "</p>";
 }
 
 function poopCounterAmt() {
@@ -23,11 +35,12 @@ function autoPoop() {
 }
 
 poopClicker.addEventListener("click", function () {
-  poops += boost;
+  poops += poopAmt;
+  poops += poopBoost;
   poopCounterAmt();
 
-  if (poops >= 100 && !autoPoopActif) {
-    autoPoopActif = true;
+  if (poops >= 100 && !autoPoopActive) {
+    autoPoopActive = true;
     alert("your companion comes to live with you!");
     setInterval(autoPoop, 1000);
   }
@@ -46,21 +59,34 @@ sellPoop.addEventListener("click", function () {
 
 buyLax.addEventListener("click", function () {
   if (dollars >= 25) {
-    if (!boostActif) {
+    if (!boostLaxActive) {
       dollars -= 25;
       dollarsCounter();
-      boost = 2;
-      boostActif = true;
+      poopBoost += 1;
+      poopBoosterCounter();
+      boostLaxActive = true;
 
       setTimeout(function () {
-        boost = 1;
-        boostActif = false;
+        poopBoost -= 1;
+        boostLaxActive = false;
+        poopBoosterCounter();
       }, 10000);
     } else {
       alert(
         "You have already taken a laxatif, it's dangerous to take a second one now."
       );
     }
+  } else {
+    alert("Not enought dollars !.");
+  }
+});
+
+buyCow.addEventListener("click", function () {
+  if (dollars >= 250) {
+    dollars -= 250;
+    dollarsCounter();
+    poopAmt += 3;
+    poopBoosterCounter();
   } else {
     alert("Not enought dollars !.");
   }
